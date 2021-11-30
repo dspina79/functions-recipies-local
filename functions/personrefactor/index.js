@@ -13,7 +13,7 @@
  
  module.exports = async function (event, context, logger) {
     logger.info(`Invoking Personrefactor with payload ${JSON.stringify(event.data || {})}`);
-    if (event.data.accountId) {
+    if (event.data.accountid) {
         let query = `SELECT Id, FirstName, LastName FROM Contact WHERE Id = '${event.data.accountid}'`;
         const results = await context.org.dataApi.query(query);
         if (results.length > 0) {

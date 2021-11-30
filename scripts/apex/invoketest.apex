@@ -1,4 +1,5 @@
-InvokeGreeterFunction.invokeGreeting('test');
+//InvokeGreeterFunction.invokeGreeting('test');
 
 
 InvokePersonRefactorFunction.invokePersonRefactor('Dean', 'Anips');
+
