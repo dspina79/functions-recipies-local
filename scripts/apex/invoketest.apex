@@ -1,0 +1,1 @@
+InvokeGreeterFunction.invokeGreeting('test');

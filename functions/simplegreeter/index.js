@@ -17,5 +17,5 @@
     let message = event.data.greeting ?? "Hello";
     let person = context?.org?.user?.username ?? "Someone";
     
-    return `${message}, ${person}`;
+    return `Greeting Version 2: ${message}, ${person}`;
 }
