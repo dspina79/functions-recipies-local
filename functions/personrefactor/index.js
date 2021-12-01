@@ -16,10 +16,10 @@
     if (event.data.accountid) {
         let query = `SELECT Id, FirstName, LastName FROM Contact WHERE Id = '${event.data.accountid}'`;
         const results = await context.org.dataApi.query(query);
-        if (results.length > 0) {
-            var result = results[0];
-            result.FirstName = result.FirstName + 'y';
-            result.LastName = result.LastName + '-ish';
+        if (results.totalSize > 0) {
+            var result = results.records[0];
+            result.fields.firstname = result.fields.firstname + 'y';
+            result.fields.lastname = result.fields.lastname + '-ish';
             return result;
         } else {
             return {"response": "record not found for: " + event.data.accountid,
