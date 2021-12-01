@@ -22,8 +22,8 @@
             result.LastName = result.LastName + '-ish';
             return result;
         } else {
-            return {}
+            return {"response": "record not found for: " + event.data.accountid};
         }
     }    
-    return {};
+    return {"response" : "event.data.accountid was null"};
 }
