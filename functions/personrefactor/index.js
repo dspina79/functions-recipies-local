@@ -22,7 +22,8 @@
             result.LastName = result.LastName + '-ish';
             return result;
         } else {
-            return {"response": "record not found for: " + event.data.accountid};
+            return {"response": "record not found for: " + event.data.accountid,
+                    "actual_data" : results};
         }
     }    
     return {"response" : "event.data.accountid was null"};
