@@ -15,6 +15,7 @@
     if (event.data.firstname && event.data.lastname) {
         let record = {"type":"Contact","fields":{"firstname": event.data.firstname,"lastname": event.data.lastname}};
         const results = await context.org.dataApi.create(record);
+
         return JSON.stringify(results);
     }
     return "event data not provided";

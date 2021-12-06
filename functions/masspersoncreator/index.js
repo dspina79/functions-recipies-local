@@ -14,7 +14,7 @@
  module.exports = async function (event, context, logger) {
     var responseData = {
         "success" : false,
-        "responseMessage" : "",
+        "details" : "",
         "errormessage": ""
     };
     var insertCount = 0;
@@ -28,7 +28,7 @@
                     let record = {"type":"Contact","fields":{"firstname": firstName, "middlename": middleInitial, "lastname": lastname}};
                     const results = await context.org.dataApi.create(record);
                     insertCount++;
-                    responseData.responseMessage = `Inserted ${insertCount} records`;
+                    responseData.details = `Inserted ${insertCount} records`;
                 }
             }
         }
